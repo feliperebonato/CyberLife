@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham\ Rounded\ Light.otf");
+}
+@font-face {
+  font-family: "Ultra";
+  src: url("./fonts/Gotham\ Ultra.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 8px 15px;
+  background-color: #fefefe;
+}
+.navbarLogo {
+  width: 120px;
+}
+.navbarButtonGroup {
+  display: flex;
+  gap: 15px;
+  background-color: #fefefe;
+}
+.navButton {
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 3px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: black;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navButton:hover {
+  border-bottom: 3px solid #66d8f6;
+  color: #66d8f6;
+}
+.titleMain {
+  margin: 10px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTitle {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  color: #f9fcf8;
+  text-shadow: #50b1e1 -0.1em 0.1em 0.4em;
+}
+.sectionSubTitle {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  color: #6ddaf7;
+  text-shadow: #f9fcf8 -0.1em 0.1em 0.4em;
+}
+.imageTitle {
+  width: 400px;
+  height: auto;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "mainTitle mainTitle"
+    "mainContent  asidebarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+.mainTitle {
+  margin: 20px;
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  border-bottom: 4px solid white;
+  grid-area: mainTitle;
+}
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+}
+.androidCard {
+  padding: 0.5vh;
+  width: 280px;
+  height: auto;
+  border: 2px solid #87a8db;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #8bb4d1;
+}
+.androidCardImg {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+.androidCard:hover {
+  border: 2px solid #132d86;
+}
+.cardTitle {
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  padding: 6px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #8bb4d1;
+}
+.cardDescription {
+  font-size: 15px;
+  text-align: justify;
+  padding: 6px;
+  background-color: #8bb4d1;
+}
+.asidebarContent {
+  background-color: #c5dce8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  gap: 20px;
+  border-radius: 8px;
+  grid-area: asidebarContent;
+}
+.asideTitle {
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+  color: #173161;
+  background-color: transparent;
+}
+.asideAndroidCard {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0.5vh;
+  width: 280px;
+  background-color: #c5dce8;
+  border: 2px solid #50b1e1;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.asideAndroidCardImg {
+  height: auto;
+  width: 200px;
+  border-radius: 10px;
+}
+.asideCardTitle {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  background-color: #132d86;
+  border-radius: 4px;
+  font-family: "Ultra", Arial, Helvetica, sans-serif;
+}
+.asideAndroidCard:hover {
+  border: 2px solid #142a83;
+}
+.footer {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+.footerAnchor {
+  color: #fefefe;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footerAnchor:hover {
+  color: #50b1e1;
+  border-bottom: 2px solid #66d8f6;
+}
+.credit {
+  font-size: 11px;
+}
+@media (max-width: 1215px) {
+  .gridContainer {
+    grid-template-areas:
+      "mainContent"
+      "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 990px) {
+  .sectionTitle {
+    font-size: 40px;
+  }
+  .sectionSubTitle {
+    font-size: 17px;
+  }
+}
+@media (max-width: 870px) {
+  .titleMain {
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionSubTitle {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 730px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 490px) {
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 415px) {
+  .navButton {
+    font-size: 12px;
+  }
+}
